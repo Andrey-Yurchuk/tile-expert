@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+form {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #feb47b;
+}
+
+#imagesContainer img {
+    margin: 10px;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+#imagesContainer img:hover {
+    transform: scale(1.1);
+}
+
+.spinner {
+    margin-top: 20px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    animation: rotateSpinner 2s linear infinite;
+    transform-origin: center center;
+    border: 3px solid #b1b1b1;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.petal {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #f9c74f;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0.9;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    animation: spinPetal 1s ease-in-out infinite;
+}
+
+.petal:nth-child(1) {
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+
+.petal:nth-child(2) {
+    transform: rotate(90deg) translate(-50%, -50%);
+}
+
+.petal:nth-child(3) {
+    transform: rotate(180deg) translate(-50%, -50%);
+}
+
+.petal:nth-child(4) {
+    transform: rotate(270deg) translate(-50%, -50%);
+}
+
+.center {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #6ae639;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes rotateSpinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spinPetal {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}

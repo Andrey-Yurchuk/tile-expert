@@ -1,0 +1,22 @@
+{
+  "name": "tile-expert/tile-expert",
+  "description": "Interface for uploading images via a link to the page",
+  "version": "1.0.0",
+  "require": {
+    "php": "^8.3",
+    "composer/installers": "^1.9",
+    "ext-pdo": "*",
+    "ext-gd": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}

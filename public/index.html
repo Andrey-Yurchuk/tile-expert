@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка изображений</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Загрузка изображений с веб-страницы</h1>
+
+<form id="imageForm" method="post">
+    <input type="text" id="url" placeholder="Введите URL страницы" required>
+    <textarea id="text" placeholder="Введите текст" rows="4" cols="50" required></textarea>
+    <input type="number" id="minWidth" placeholder="Минимальная ширина изображения" required>
+    <input type="number" id="minHeight" placeholder="Минимальная высота изображения" required>
+    <button type="submit">Загрузить изображения</button>
+    <div id="spinner" class="spinner" style="display:none;">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+    </div>
+</form>
+
+<div id="imagesContainer"></div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
