@@ -1,8 +1,6 @@
 document.getElementById('imageForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    document.getElementById('spinner').style.display = 'inline-block';
-
     const url = document.getElementById('url').value;
     const text = document.getElementById('text').value;
     const minWidth = document.getElementById('minWidth').value;
@@ -12,6 +10,8 @@ document.getElementById('imageForm').addEventListener('submit', function (e) {
         alert('Минимальная ширина и высота должны быть не менее 200px');
         return;
     }
+
+    document.getElementById('spinner').style.display = 'inline-block';
 
     fetch('/process', {
         method: 'POST',
