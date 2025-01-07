@@ -51,7 +51,7 @@ class ImageController
     {
         header('Content-Type: application/json');
 
-        $images = glob('uploads/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+        $images = glob('uploads/*.{jpg,jpeg,png,gif,webp}', GLOB_BRACE);
 
         echo json_encode(['images' => $images], JSON_THROW_ON_ERROR);
     }

@@ -63,6 +63,8 @@ class ImageService
      */
     private function downloadImage(string $imageUrl, string $baseUrl): ?string
     {
+        $imageUrl = strtok($imageUrl, '?');
+
         if (!str_contains($imageUrl, 'http')) {
             $imageUrl = $baseUrl . '/' . ltrim($imageUrl, '/');
         }
@@ -108,6 +110,8 @@ class ImageService
             imagepng($croppedImage, $filename);
         } elseif ($ext === 'gif') {
             imagegif($croppedImage, $filename);
+        } elseif ($ext === 'webp') {
+            imagewebp($croppedImage, $filename);
         }
 
         imagedestroy($image);
